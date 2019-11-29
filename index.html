@@ -9,7 +9,284 @@
 
     
 
+</script>
 
+<meta name="description" content="תחזית ל-10 הימים הקרובים באזור ירושלים,טמפ מינימום ומקסימום יומי,ממוצעי טמפ ומשקעים בעיר הבירה,מידע על הלחות היומית ועומס החום,מידע אקלימי" />
+
+<title>תחזית מזג האוויר  בירושלים לשבוע הקרוב</title>
+<!--meta http-equiv="cache-control" content="no-cache"-->
+<link rel="stylesheet" type="text/css" href="/ie.css" title="mystyle">
+</head>
+
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0">
+
+
+
+<div align="center">
+
+
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(["init", {
+      appId: "e36e3b6b-a4d4-4f64-9e05-712cc3d59688",
+      autoRegister: false, /* Set to true to automatically prompt visitors */
+      subdomainName: 'https://israelweather.onesignal.com',
+      httpPermissionRequest: {
+        enable: true
+      },
+	  welcomeNotification: {
+		"title": "תחזית מזג האוויר חדשות בישראל - www.IsraelWeather.co.il",
+		"message": "תודה, אתה מנוי כעת לקבלת התראות",
+	  },
+      notifyButton: {
+		  enable: true, /* Required to use the notify button */
+          position: 'bottom-left',
+		  offset: {
+			bottom: '45px',
+			left: '10px', /* Only applied if bottom-left */
+			right: '0px' /* Only applied if bottom-right */
+		  },
+          showCredit: false, /* Hide the OneSignal logo */
+          text: {
+			'tip.state.unsubscribed': 'קבל התראות',
+			'tip.state.subscribed': "אתה מנוי כעת לקבלת התראות מהאתר",
+			'tip.state.blocked': "חסימת קבלת התראות",
+			'message.prenotify': 'לחץ לקבלת התראות',
+			'message.action.subscribed': "תודה שהצטרפת!",
+			'message.action.resubscribed': "ברוך שובך!",
+			'message.action.unsubscribed': "לא תקבל מאיתנו התראות שוב, תודה",
+			'dialog.main.title': 'ניהול התראות',
+			'dialog.main.button.subscribe': 'קבל התראות',
+			'dialog.main.button.unsubscribe': 'לא מעוניין בקבלת התראות',
+			'dialog.blocked.title': 'הסרת חסימה מקבלת התראות',
+			'dialog.blocked.message': "עקוב אחר הוראות אלו על מנת לאפשר קבלת הודעות:"
+			}
+		}
+	}]);
+
+  </script>
+  
+
+<script>
+
+var dragswitch=0
+var nsx
+var nsy
+var nstemp
+
+function drag_dropns(name)
+{
+temp=eval(name)
+temp.captureEvents(Event.MOUSEDOWN | Event.MOUSEUP)
+temp.onmousedown=gons
+temp.onmousemove=dragns
+temp.onmouseup=stopns
+}
+
+function gons(e)
+{
+temp.captureEvents(Event.MOUSEMOVE)
+nsx=e.x
+nsy=e.y
+}
+
+function dragns(e)
+{
+if (dragswitch==1)
+	{
+	temp.moveBy(e.x-nsx,e.y-nsy)
+	return false
+	}
+}
+
+function stopns()
+{
+temp.releaseEvents(Event.MOUSEMOVE)
+}
+
+var dragapproved=false
+
+function drag_dropie()
+{
+if (dragapproved==true)
+	{
+	document.all.showimage.style.pixelLeft=tempx+event.clientX-iex
+	document.all.showimage.style.pixelTop=tempy+event.clientY-iey
+	return false
+	}
+}
+
+function initializedragie()
+{
+iex=event.clientX
+iey=event.clientY
+tempx=showimage.style.pixelLeft
+tempy=showimage.style.pixelTop
+dragapproved=true
+document.onmousemove=drag_dropie
+}
+
+
+if (document.all)
+{
+document.onmouseup=new Function("dragapproved=false")
+}
+
+function hidebox()
+{
+if (document.all)
+	showimage.style.visibility="hidden"
+else if (document.layers)
+	document.showimage.visibility="hide"
+}
+
+function showbox()
+{
+if (document.all)
+	showimage.style.visibility="visible"
+else if (document.layers)
+	document.showimage.visibility="visible"
+}
+
+function sendmail()  
+{
+document.script_info.submit()
+if (document.all)
+	showimage.style.visibility="hidden"
+else if (document.layers)
+	document.showimage.visibility="hide"
+}
+var message="";
+
+function clickIE() //This function cdisable the right click
+{
+if (document.all) 
+	{
+	(message);return false;
+	}
+}
+function clickNS(e) 
+{
+if 	(document.layers||(document.getElementById&&!document.all))
+	{
+	if (e.which==2||e.which==3) 
+		{
+		(message);return false;
+		}
+	}
+}
+if (document.layers) 
+{
+document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;
+}
+else
+{
+document.onmouseup=clickNS;document.oncontextmenu=clickIE;
+}
+
+document.oncontextmenu=new Function("return false")
+
+
+function disableselect(e)  //Disable select-text 
+{
+return false
+}
+
+function reEnable()  //Disable select-text 
+{
+return true
+}
+
+//if IE4+ Disable select-text 
+document.onselectstart=new Function ("return false")
+
+//if NS6  Disable select-text
+if (window.sidebar)
+{
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+
+</script>
+
+<!-- HEADER FOR HARESHET ADS -->
+<script type="text/javascript">
+  /*var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21338687-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();*/
+   
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-21338687-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<script>
+	var windowHandle2fdt = null;
+function IsPopUpOpen2fdt()  //This function checks if the window is open
+{
+  if (windowHandle2fdt != null)
+  {
+      if (windowHandle2fdt.closed)
+         return 0
+      else
+        return 1
+  }
+  else
+    return 0
+}
+
+function open_win2fdt()  //This function opens the window or focus on the window
+{
+if (IsPopUpOpen2fdt())
+    windowHandle2fdt.focus()
+else
+	windowHandle2fdt=window.open( ".chat_new/chat/default.asp" , "chat"  ,  "toolbar=no,status=no,scrollbars=no,dependent,resizable=no,width=700,height=420,left=yes,top=yes" )
+}	
+</script>
+
+<script>// request permission on page load
+document.addEventListener('DOMContentLoaded', function () {
+  if (!Notification) {
+    alert('Desktop notifications not available in your browser. Try Chromium.'); 
+    return;
+  }
+
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+});
+
+function notifyMe() {
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+  else {
+    var notification = new Notification('Notification title2222', {
+      icon: 'https://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+      body: "Hey there! You've been notified!2222",
+    });
+
+    notification.onclick = function () {
+      window.open("https://stackoverflow.com/a/13328397/1269037");      
+    };
+
+  }
+
+}
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script id="free_accessibility_plugin_script" src="https://accessibility.f-static.com/site/free-accessibility-plugin/accessibility.min.js?lan=en&place=bottom-right&distance=50" crossorigin="anonymous"></script>
     <!-- Website CSS variables --> <style>    :root {
