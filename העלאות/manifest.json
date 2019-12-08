@@ -1,0 +1,9 @@
+{
+	"name": "\u05d4\u05d5\u05e8\u05d3\u05ea \u05d5\u05d5\u05d9\u05e0\u05d3\u05d5\u05e1",
+	"short_name": "\u05d4\u05d5\u05e8\u05d3\u05ea \u05d5\u05d5\u05d9\u05e0\u05d3\u05d5\u05e1",
+	"theme_color": "#333333",
+	"background_color": "#000000",
+	"display": "standalone",
+	"Scope": "https://windownload.github.io/",
+	"start_url": "https://windownload.github.io/",
+	"icons": [{"src":"https://github.com/WinDownload/WinDownload.github.io/blob/master/%D7%94%D7%A2%D7%9C%D7%90%D7%95%D7%AA/a.jpg?raw=true"}]}
