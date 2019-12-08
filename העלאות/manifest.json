@@ -6,4 +6,4 @@
 	"display": "standalone",
 	"Scope": "https://windownload.github.io/",
 	"start_url": "https://windownload.github.io/",
-	"icons": [{"src":"https://github.com/WinDownload/WinDownload.github.io/blob/master/%D7%94%D7%A2%D7%9C%D7%90%D7%95%D7%AA/a.jpg?raw=true"}]}
+	"icons": [{"src":"https://raw.githubusercontent.com/WinDownload/WinDownload.github.io/master/%D7%94%D7%A2%D7%9C%D7%90%D7%95%D7%AA/a.jpg"}]}
